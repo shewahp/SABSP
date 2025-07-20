@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Adhishakthi Bhuvaneshwari Adhinatha Siddapeeta</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+<div class="top-nav">
+  <div class="container">
+    <div class="date-time" id="dateTime"></div>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">
+        <img src="assets/img/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="assets/img/youtube.svg" alt="Instagram" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" />
+      <span>Shri Adhishakthi Bhuvaneshwari 
+        <br>Adhinatha Siddapeeta</span>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Temple History</a></li>
+            <li><a href="#">Trust</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Temple</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Pooja Details</a></li>
+            <li><a href="#">Festivals</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="language-switcher">
+      <a href="#">EN</a> | <a href="#">TE</a>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Shri Adhishakthi Bhuvaneshwari Temple</h1>
+      <p>Experience divinity and bliss at our sacred Siddapeeta</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About the Temple</h2>
+    <p>
+      Shri Adhishakthi Bhuvaneshwari Adhinatha Siddapeeta is a place of spiritual peace, located in [Your City]. The temple is dedicated to Goddess Bhuvaneshwari and conducts various religious services and community events.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Pooja Services</h3>
+        <p>Daily rituals and special poojas performed by temple priests.</p>
+      </div>
+      <div class="card">
+        <h3>Festivals</h3>
+        <p>Celebrate all major Hindu festivals with grandeur and devotion.</p>
+      </div>
+      <div class="card">
+        <h3>Community Events</h3>
+        <p>Social and cultural programs for devotees and the community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="assets/img/temple-front1.jpg" alt="Temple Image 2" />
+      <img src="assets/img/temple-front2.jpg" alt="Temple Image 3" />
+      <img src="assets/img/temple-front3.jpg" alt="Temple Image 3" />
+      <img src="assets/img/temple-front4.jpg" alt="Temple Image 3" />
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@bhuvaneshwari.org | Phone: +91-12345-67890</p>
+    <p>Address: Shri Adhishakthi Bhuvaneshwari Temple, Mangaluru</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shri Adhishakthi Bhuvaneshwari Adhinatha Siddapeeta. All rights reserved.</p>
+  </footer>
+  <script>
+  function updateDateTime() {
+    const now = new Date();
+    const options = {
+      weekday: "short",   // Mon, Tue, etc.
+      year: "numeric",    // 2025
+      month: "short",     // Jan, Feb, etc.
+      day: "numeric",     // 1–31
+      hour: "2-digit",    // 01–12
+      minute: "2-digit",  // 00–59
+      hour12: true        // AM/PM format
+    };
+    document.getElementById("dateTime").textContent =
+      now.toLocaleDateString("en-IN", options);
+  }
+  setInterval(updateDateTime, 60000); // Update every 1 min
+  updateDateTime();
+</script>
+
+</body>
+</html>

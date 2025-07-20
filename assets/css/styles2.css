@@ -1,0 +1,273 @@
+/* Variables */
+:root {
+    --primary: #FF8C00; /* Saffron Orange */
+    --primary-dark: #E67E00;
+    --primary-light: #FFA726;
+    --secondary: #FFD700; /* Gold */
+    --dark: #1A120B; /* Dark Brown */
+    --light: #FFF8E1;
+    --text: #333;
+    --text-light: #666;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+.logo-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.logo-text p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--dark);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--primary);
+}
+
+.nav-menu i {
+    margin-right: 0.5rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    min-height: 400px;
+    background: url('../img/temple-front1.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.welcome-content img {
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.welcome-text {
+    width: 50%;
+}
+
+.welcome-text p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 104px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 104px);
+        background-color: var(--dark);
+        flex-direction: column;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .welcome-content {
+        flex-direction: column;
+    }
+    
+    .welcome-content img,
+    .welcome-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-text h1 {
+        font-size: 1.3rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.8rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
