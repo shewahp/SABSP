@@ -159,6 +159,38 @@ body {
   text-shadow: 2px 2px 4px #000;
 }
 
+/* Hero background overrides per page */
+.hero.about-hero {
+  background-image: url('../img/hero-about.jpg');
+}
+
+.hero.pooja-hero {
+  background-image: url('../img/hero-pooja.jpg');
+}
+
+.hero.festivals-hero {
+  background-image: url('../img/hero-festivals.jpg');
+}
+
+.hero.history-hero {
+  background-image: url('../img/hero-history.jpg');
+}
+
+.hero.trust-hero {
+  background-image: url('../img/hero-trust.jpg');
+}
+
+.hero.events-hero {
+  background-image: url('../img/hero-events.jpg');
+}
+
+.hero.gallery-hero {
+  background-image: url('../img/hero-gallery.jpg');
+}
+
+.hero.contact-hero {
+  background-image: url('../img/hero-contact.jpg');
+}
 
 .hero-text {
   text-align: center;
@@ -222,4 +254,26 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
+}
+
+.about ul,
+.contact ul {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 700px;
+  padding-left: 20px;
+}
+
+.about ul li,
+.contact ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.about h2,
+.contact h2,
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2f3193;
 }
