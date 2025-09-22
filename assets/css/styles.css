@@ -72,7 +72,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 14px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -94,7 +94,8 @@ body {
 
 .site-header .logo img {
   height: 40px;
-  margin-right: 10px;
+  margin-right: 12px;
+  max-height: 50px;
 }
 
 .nav-menu {
@@ -276,4 +277,100 @@ footer {
   font-size: 2rem;
   margin-bottom: 15px;
   color: #2f3193;
+}
+
+/* Donation Button */
+.donate-btn {
+  display: inline-block;
+  background: #f77f00;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 50px; /* rounded pill */
+  padding: 6px 14px;   /* smaller size */
+  margin-left: 10px;
+  font-size: 12px;     /* smaller font */
+  border: 2px solid #fff;   /* white border */
+  box-shadow: 0 3px 8px rgba(247, 127, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+.donate-btn:hover {
+  background: #e76f00;
+  transform: scale(1.08);
+  box-shadow: 0 5px 14px rgba(247, 127, 0, 0.6);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(247, 127, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(247, 127, 0, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(247, 127, 0, 0.6);
+  }
+}
+
+
+/* Donation CSS */
+.account-details {
+  max-width: 800px;       /* increased width to accommodate long text */
+  margin: 80px auto;
+  padding: 25px;
+  background: #fff;
+  border: 2px solid #f77f00;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: soft-glow 4s infinite;
+  overflow-x: auto;       /* allows horizontal scroll if needed */
+}
+
+.account-details h2 {
+  margin-bottom: 20px;
+  color: #f77f00;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.account-details table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  table-layout: auto;     /* allows column width to adjust to content */
+}
+
+.account-details th,
+.account-details td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+  white-space: normal;   /* allow text to wrap if necessary */
+}
+
+.account-details th {
+  background: #fff7f0;   /* light orange tint */
+  color: #f77f00;
+  font-weight: bold;
+  width: 30%;
+  white-space: nowrap;   /* keep label on one line */
+}
+
+.account-details td {
+  background: #fcfcfc;
+  font-weight: bold;     /* values bold */
+}
+
+@keyframes soft-glow {
+  0%   { box-shadow: 0 0 8px rgba(247,127,0,0.2); }
+  50%  { box-shadow: 0 0 16px rgba(247,127,0,0.3); }
+  100% { box-shadow: 0 0 8px rgba(247,127,0,0.2); }
 }
